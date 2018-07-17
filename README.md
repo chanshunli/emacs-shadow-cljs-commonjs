@@ -2,6 +2,40 @@
 Example for [shadow-cljs](https://github.com/thheller/shadow-cljs)
 ----
 
+## 1. 启动node-repl
+
+```bash
+➜  minimal-shadow-cljs-commonjs git:(master) ✗ shadow-cljs node-repl
+shadow-cljs - socket REPL running on port 53372
+
+[0:0]~cljs.user=> (require 'example.main) => ## nil
+[0:0]~cljs.user=> (example.main/main)
+object[Stream [object Object]]
+[0:0]~cljs.user=> {"origin":"183.240.196.145"}
+
+```
+
+## 2. Emacs连接node-repl
+```bash
+M-x cider-connect-cljs 127.0.0.1:53372
+
+shadow.user> (node-repl)
+To quit, type: :cljs/quit
+[:selected :node-repl]
+cljs.user>
+cljs.user> (require 'example.main)
+nil
+cljs.user> (example.main/main)
+#object[Stream [object Object]]
+cljs.user>
+cljs.user>
+
+
+```
+
+------------
+
+
 ### Usage
 
 Compile ClojureScript into CommonJS JavaScript:
