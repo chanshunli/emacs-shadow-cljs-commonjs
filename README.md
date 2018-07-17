@@ -38,6 +38,9 @@ cljs.user>
 
 ```
 
+## 3. Emacs打开CLJS文件,手动打开`M-x clojure-mode` => `C-x C-e`
+
+
 ------------
 
 
