@@ -14,6 +14,16 @@ object[Stream [object Object]]
 [0:0]~cljs.user=> {"origin":"183.240.196.145"}
 
 ```
+```elisp
+(defun cljs-node-start ()
+  (interactive)
+  (progn
+    (insert "(use 'shadow.cljs.devtools.api)\n")
+    (insert "(node-repl)\n")
+    (sleep-for 2)
+    )
+  )
+```
 
 ## 2. Emacs连接node-repl
 ```bash
