@@ -19,10 +19,15 @@ object[Stream [object Object]]
 ```bash
 M-x cider-connect-cljs 127.0.0.1:53372
 
+shadow.user> (use 'shadow.cljs.devtools.api)
+WARNING: test already refers to: #'clojure.core/test in namespace: shadow.user, being replaced by: #'shadow.cljs.devtools.api/test
+WARNING: compile already refers to: #'clojure.core/compile in namespace: shadow.user, being replaced by: #'shadow.cljs.devtools.api/compile
+nil
 shadow.user> (node-repl)
 To quit, type: :cljs/quit
 [:selected :node-repl]
 cljs.user>
+
 cljs.user> (require 'example.main)
 nil
 cljs.user> (example.main/main)
